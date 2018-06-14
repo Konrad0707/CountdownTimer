@@ -22,10 +22,11 @@
 
 .bounding {
   margin:0 auto;
+  text-align: center;
   padding-top: 10px;
   border-radius: 8px;
   background-color: #4DD8AD;
-  width:90px;
-  height:80px;
+  width:105px;
+  height:90px;
 
 }
