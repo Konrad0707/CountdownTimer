@@ -14,6 +14,7 @@ class App extends Component {
   }
   componentDidMount(){
     let countDownDate = new Date("Aug 10, 2018 15:37:25").getTime()
+    console.log(countDownDate)
     this.interval = setInterval(function() {
       // the time right now
       var today = new Date().getTime()
@@ -21,13 +22,15 @@ class App extends Component {
       var diff = countDownDate - today
       // Time calculations for days, hours, minutes and seconds
       this.setState({
-      days: Math.floor(diff/ (1000 * 60 * 60 * 24)),
-      hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-      minutes: Math.floor((diff% (1000 * 60 * 60)) / (1000 * 60)),
-      seconds: Math.floor((diff % (1000 * 60)) / 1000),
+        days: Math.floor(diff/ (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((diff% (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((diff % (1000 * 60)) / 1000)
       })
-    }, 1000)
+    }.bind(this), 1000)
   }
+
+
 
   // Update the count down every 1 second
   componentWillUnmount() {
@@ -40,20 +43,20 @@ class App extends Component {
         <h1>Countdown Clock</h1>
         <div id="clockdiv">
           <div>
-            <span class="days">{this.state.days}</span>
-            <div class="smalltext">Days</div>
+            <span className="days">{this.state.days}</span>
+            <div className="smalltext">Days</div>
           </div>
           <div>
-            <span class="hours">{this.state.hours}</span>
-            <div class="smalltext">Hours</div>
+            <span className="hours">{this.state.hours}</span>
+            <div className="smalltext">Hours</div>
           </div>
           <div>
-            <span class="minutes">{this.state.minutes}</span>
-            <div class="smalltext">Minutes</div>
+            <span className="minutes">{this.state.minutes}</span>
+            <div className="smalltext">Minutes</div>
           </div>
           <div>
-            <span class="seconds">{this.state.seconds}</span>
-            <div class="smalltext">Seconds</div>
+            <span className="seconds">{this.state.seconds}</span>
+            <div className="smalltext">Seconds</div>
           </div>
         </div>
       </div>
