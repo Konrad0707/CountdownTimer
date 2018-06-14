@@ -2,7 +2,30 @@
   text-align: center;
   width:100%;
   height:100%;
-  background: #00ECB9;
+  font-style: #132226;
   font-family: sans-serif;
   font-weight: 100;
+}
+
+.clock {
+  font-family: sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top:20px;
+}
+
+.bounding {
+  margin:0 auto;
+  padding-top: 10px;
+  border-radius: 8px;
+  background-color: #4DD8AD;
+  width:90px;
+  height:80px;
+
 }

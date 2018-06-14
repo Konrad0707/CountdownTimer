@@ -40,23 +40,24 @@ class App extends Component {
   render() {
     return (
       <div className="Countdown">
-        <h1>Countdown Clock</h1>
-        <div id="clockdiv">
-          <div>
+        <h1>Website still under constuction</h1>
+        <h3>Will be online in:</h3>
+        <div className="clock">
+          <div className = "bounding">
             <span className="days">{this.state.days}</span>
             <div className="smalltext">Days</div>
           </div>
-          <div>
+          <div className = "bounding">
             <span className="hours">{this.state.hours}</span>
             <div className="smalltext">Hours</div>
           </div>
-          <div>
+          <div className = "bounding">
             <span className="minutes">{this.state.minutes}</span>
-            <div className="smalltext">Minutes</div>
+            <div className="smalltext">Min</div>
           </div>
-          <div>
+          <div className = "bounding">
             <span className="seconds">{this.state.seconds}</span>
-            <div className="smalltext">Seconds</div>
+            <div className="smalltext">Sec</div>
           </div>
         </div>
       </div>
